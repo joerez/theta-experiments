@@ -1,0 +1,25 @@
+.navbar {
+    position: fixed;
+    background: white;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+    .container {
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+
+    .brand {
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+    }
+}
