@@ -12,7 +12,6 @@ class Trades extends Component {
     render() { 
         return (
             <div className="trade-container">
-                Trades
                 {this.props.trades && this.props.trades.map((trade) => (
                     <Trade trade={trade} key={trade.guid} />
                 ))}

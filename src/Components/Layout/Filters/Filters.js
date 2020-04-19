@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './index.scss';
 
 class Filters extends Component {
 
@@ -8,16 +9,36 @@ class Filters extends Component {
 
     render() {
         return (
-            <div>
-                Filter Menu
+            <div className="filter-menu">
 
-                <div onClick={(e) => this.props.filterByTradeType('ALL')}>
+                <div className="filter" onClick={(e) => this.props.filterByTradeType('ALL')}>
                     Show All
                 </div>
 
-                <div onClick={(e) => this.props.filterByTradeType('SHORT NAKED PUT')}>
+                <div className="filter" onClick={(e) => this.props.filterByTradeType('SHORT NAKED PUT')}>
                     Short Naked Puts
                 </div>
+
+                <div className="filter" onClick={(e) => this.props.filterByTradeType('LONG NAKED PUT')}>
+                    Long Naked Puts
+                </div>
+
+                <div className="filter" onClick={(e) => this.props.filterByTradeType('SHORT STRADDLE')}>
+                    Short Straddle
+                </div>
+
+                <div className="filter" onClick={(e) => this.props.filterByTradeType('PUT CREDIT SPREAD')}>
+                    Put Credit Spreads
+                </div>
+
+                <div className="filter" onClick={(e) => this.props.filterByTradeType('SHORT IRON CONDOR')}>
+                    Short Iron Condors
+                </div>
+
+                <div className="filter" onClick={(e) => this.props.filterByTradeType('COVERED CALL')}>
+                    Covered Calls
+                </div>
+
             </div>
         )
     }

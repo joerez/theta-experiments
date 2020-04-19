@@ -51,7 +51,9 @@ class Main extends Component {
         return (
             <div className="main">
                 <div className="container">
+                    <div>Filter Menu</div>
                     <Filters filterByTradeType={this.filterByTradeType} />
+                    <div>Trades</div>
                     <Trades trades={this.state.trades} />
                 </div>
             </div>
