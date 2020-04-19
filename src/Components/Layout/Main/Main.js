@@ -29,22 +29,27 @@ class Main extends Component {
     }
 
     filterByTradeType = (TYPE) => {
-        const trades = [];
 
-        if (TYPE === 'ALL') {
-            this.getAllTrades();
-        } else {
-            dummyData.data.thots.forEach(trade => {
+        this.setState({
+            trades: []
+        }, () => {
+            const trades = [];
 
-                if (trade.Trade && trade.Trade.type === TYPE) {
-                    trades.push(trade);
-                }
-            })
+            if (TYPE === 'ALL') {
+                this.getAllTrades();
+            } else {
+                dummyData.data.thots.forEach(trade => {
     
-            this.setState({
-                trades: trades
-            })    
-        }
+                    if (trade.Trade && trade.Trade.type === TYPE) {
+                        trades.push(trade);
+                    }
+                })
+        
+                this.setState({
+                    trades: trades
+                })    
+            }    
+        })
     }
 
     render() {
